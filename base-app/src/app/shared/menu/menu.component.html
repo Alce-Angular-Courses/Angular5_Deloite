@@ -1,14 +1,20 @@
 <nav class="col-8">
     <ul class="nav nav-pills">
         <li class="nav-item nav-link">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link" 
+            [routerLinkActive]="['active']" 
+            [routerLink]="'inicio'" translate>Inicio</a>
         </li>
         <li class="nav-item nav-link">
-            <a class="nav-link" href="#">Tareas</a>
+            <a class="nav-link" 
+            [routerLinkActive]="['active']" 
+            routerLink="tareas" translate>Tareas</a>
         </li>
 
         <li class="nav-item nav-link">
-            <a class="nav-link" href="#">Acerca de</a>
+            <a class="nav-link" 
+            [routerLinkActive]="['active']"
+            routerLink="about" translate>Acerca de</a>
         </li>
     </ul>
 </nav>
