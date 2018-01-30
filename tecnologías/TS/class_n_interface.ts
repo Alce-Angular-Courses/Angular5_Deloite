@@ -19,3 +19,6 @@ class Socio implements Usuario {
         console.log(`Hola, saludos de ${name}`)
     };
 }
+
+let pepe = new Socio();
+pepe.saludar()

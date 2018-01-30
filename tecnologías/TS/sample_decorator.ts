@@ -4,7 +4,7 @@
 function course(target) {
     Object.defineProperty(
         target.prototype, 
-        'course', 
+        'curso', 
         {value: () => "Angular 2"}
     )
 }
@@ -25,7 +25,7 @@ class Person {
 // Instanciación de un objeto de esta clase
 {
     let oPersona = new Person("Pepe", "Pérez");
-    console.log(oPersona.course()); // Angular 2
+    console.log(oPersona.curso()); // Angular 2
 }
 
 // Ejemplo de función que define un decorator con argumentos
@@ -39,8 +39,9 @@ function Student(config) {
     }
 }
 
+@course
 @Student({
-    course: "Angular 2"
+    course: "Angular 5"
 })
 class Persona {
     firstName;
@@ -53,6 +54,7 @@ class Persona {
 }
 
 {
-    let oPersona = new Person("Pepe", "Pérez");
-    console.log(oPersona.course()); // Angular 2
+    let oPersona = new Persona("Pepe", "Pérez");
+    console.log(oPersona.curso()); // Angular 2
+    console.log(oPersona.course()); // Angular x
 }
