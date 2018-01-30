@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // Modulos de la aplicación
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { SystemModule } from './system/system.module';
 // Modulos de terceros
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
-// Componentes 
+// Componentes
 import { AppComponent } from './app.component';
 import { InicioModule } from './inicio/inicio.module';
 import { TareasModule } from './tareas/tareas.module';
@@ -17,6 +19,7 @@ import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { HttpModule, Http } from '@angular/http';
+
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -25,6 +28,7 @@ registerLocaleData(localeEs);
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     NgbModule.forRoot(),
     ChartsModule,
@@ -37,6 +41,7 @@ registerLocaleData(localeEs);
     ),
     AppRoutingModule,
     SharedModule,
+    SystemModule,
     InicioModule,
     TareasModule,
     AboutModule

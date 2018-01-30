@@ -1,4 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<select name="selecIdiomas" id="selecIdiomas" [(ngModel)]="selectIdioma"
+    (change)="selecionarIdioma()">
+    <option *ngFor="let idioma of aIdiomas"
+    [ngValue]="idioma" >{{idioma.name}}</option>
+</select>
+
 <app-cabeza></app-cabeza>
 <app-menu></app-menu>
 
