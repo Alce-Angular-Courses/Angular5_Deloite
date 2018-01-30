@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
-import { TareasComponent } from './tareas/tareas.component';
-import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: 'inicio', component: InicioComponent },
-  { path: 'tareas', component: TareasComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioModule' },
+  { path: 'tareas', loadChildren: './tareas/tareas.module#TareasModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 

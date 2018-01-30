@@ -12,9 +12,9 @@ import { ChartsModule } from 'ng2-charts';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 // Componentes
 import { AppComponent } from './app.component';
-import { InicioModule } from './inicio/inicio.module';
+/* import { InicioModule } from './inicio/inicio.module';
 import { TareasModule } from './tareas/tareas.module';
-import { AboutModule } from './about/about.module';
+import { AboutModule } from './about/about.module'; */
 // Configuracion LOCALE
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
@@ -44,9 +44,9 @@ registerLocaleData(localeEs);
     AppRoutingModule,
     SharedModule,
     SystemModule,
-    InicioModule,
+    /* InicioModule,
     TareasModule,
-    AboutModule
+    AboutModule */
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'es' } ],
   bootstrap: [AppComponent]
