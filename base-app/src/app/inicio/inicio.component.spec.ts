@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InicioComponent } from './inicio.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
 
 describe('InicioComponent', () => {
   let component: InicioComponent;
@@ -8,7 +10,13 @@ describe('InicioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InicioComponent ]
+      declarations: [
+        InicioComponent,
+        DashboardComponent
+       ],
+       imports: [
+         ChartsModule
+        ]
     })
     .compileComponents();
   }));

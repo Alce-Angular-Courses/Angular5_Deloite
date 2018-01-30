@@ -5,17 +5,21 @@ import { PieComponent } from './pie/pie.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from 'ng2-translate';
+import { IdiomaComponent } from './idioma/idioma.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule,
     TranslateModule
   ],
   declarations: [
     CabezaComponent,
     PieComponent,
-    MenuComponent
+    MenuComponent,
+    IdiomaComponent
   ],
   exports : [
     CabezaComponent,

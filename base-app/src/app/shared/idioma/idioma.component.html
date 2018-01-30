@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+      <div class="form-group offset-10 col-2">
+          <label for=""></label>
+          <select class="form-control" name="idioma" id="idioma" 
+          [(ngModel)] ="selectIdioma" (change)="selecionarIdioma()">
+              <option *ngFor="let idioma of aIdiomas" [ngValue]="idioma">{{idioma.name}}</option>
+          </select>
+      </div>
+  </div>
+</div>

@@ -2,13 +2,23 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { HttpModule, Http } from '@angular/http';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        SharedModule
+        HttpModule,
+        SharedModule,
+        TranslateModule.forRoot(
+          {
+          provide: TranslateLoader,
+          useFactory: tralationFactory,
+          deps: [Http]
+          }
+        ),
       ],
       declarations: [
         AppComponent
@@ -32,3 +42,8 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Angular');
   }));
 });
+
+export function tralationFactory(http: Http) {
+  return new TranslateStaticLoader(
+    http, '/assets/i18n', '.json');
+}
