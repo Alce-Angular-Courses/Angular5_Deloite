@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // Modulos de la aplicación
@@ -30,6 +31,7 @@ registerLocaleData(localeEs);
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     ChartsModule,
     TranslateModule.forRoot(

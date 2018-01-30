@@ -15,13 +15,27 @@
 
 <div class="card">
     <div class="card-header">
-        Header
+        Probando pipes
     </div>
     <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+        <p class="card-text pl-4">Titulo inicial</p>
+        <p class="card-text pl-4">{{titulo}}</p>
+        <p class="card-text pl-4">Texto inicial</p>
+        <p class="card-text pl-4">{{texto}}</p>
     </div>
     <div class="card-footer text-muted">
-        Footer
+        <p>Ejemplo del uso de pipes</p>
+        <p>{{ titulo | capitalizar }}</p>
+        <p>{{ texto | truncar: 29 }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <p>Ejemplo del uso de pipes</p>
+        <p>{{ titulo | capitalizar }}</p>
+        <p>{{ texto | truncar: 29 }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <p>Problema del pipe titlecase</p>
+        <p>{{ titulo | titlecase }}</p>
+        <p>{{ titulo | titularizar  }}</p>
     </div>
 </div>

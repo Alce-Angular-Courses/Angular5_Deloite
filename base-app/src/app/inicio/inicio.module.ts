@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from 'ng2-charts';
 import { PanelComponent } from './panel/panel.component';
 import { SystemModule } from '../system/system.module';
+import { BotonComponent } from './boton/boton.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SystemModule } from '../system/system.module';
   declarations: [
     InicioComponent,
     DashboardComponent,
-    PanelComponent
+    PanelComponent,
+    BotonComponent
   ],
   exports: [
     InicioComponent
