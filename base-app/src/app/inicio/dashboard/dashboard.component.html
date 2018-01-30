@@ -1,10 +1,14 @@
 <h3>Dashboard</h3>
-<div style="display: block">
-  <canvas baseChart
-  [datasets]="barChartData"
-  [labels]="barChartLabels"
-  [options]="barChartOptions"
-  [legend]="barChartLegend"
-  [chartType]="barChartType"></canvas>
+<div class="row align-items-start">
+  <div style="display: block" class="col-6">
+    <canvas baseChart
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [legend]="barChartLegend"
+    [chartType]="barChartType"></canvas>
+  </div>
+  <app-panel class="col-6"></app-panel>
 </div>
+  
 

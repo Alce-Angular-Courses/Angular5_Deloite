@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from 'ng2-charts';
+import { PanelComponent } from './panel/panel.component';
+import { SystemModule } from '../system/system.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    ChartsModule
+    ChartsModule,
+    SystemModule
   ],
   declarations: [
     InicioComponent,
-    DashboardComponent
+    DashboardComponent,
+    PanelComponent
   ],
   exports: [
     InicioComponent
