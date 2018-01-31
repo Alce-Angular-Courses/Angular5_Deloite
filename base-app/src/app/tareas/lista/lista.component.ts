@@ -7,17 +7,17 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-
   sTitle: string;
   sEtiquetaBtn: string;
   @Input() aItems: Array<any>;
   @Output() outBorrarItem: EventEmitter<number>;
 
   constructor() {
-    this.outBorrarItem = new EventEmitter();
+     this.outBorrarItem = new EventEmitter();
   }
 
   ngOnInit() {
+
     this.sTitle = 'Lista de Items';
     this.sEtiquetaBtn = 'Eliminar';
   }

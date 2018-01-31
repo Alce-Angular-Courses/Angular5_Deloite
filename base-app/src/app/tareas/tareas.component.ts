@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <div class="container mb-2">
     <div class="row align-items-center">
       <app-panel-tareas class="col-6 text-center"></app-panel-tareas>
-     <!--<app-panel-rx class="col-6 text-center"></app-panel-rx> -->
+      <app-panel-rx class="col-6 text-center"></app-panel-rx>
     </div>
   </div>
     `,
