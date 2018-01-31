@@ -23,6 +23,7 @@ import localeEs from '@angular/common/locales/es';
 import { HttpModule, Http } from '@angular/http';
 // Servicios de la aplicacion
 import { BookService } from './services/book.service';
+import { AuthGuard } from './services/guard.service';
 
 registerLocaleData(localeEs);
 
@@ -51,7 +52,8 @@ registerLocaleData(localeEs);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' },
-    BookService
+    BookService,
+    AuthGuard
    ],
   bootstrap: [AppComponent]
 })
