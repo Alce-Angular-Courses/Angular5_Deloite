@@ -1,0 +1,13 @@
+
+
+<div class="card">
+  <div class="card-header">
+    <h2>{{titulo}}</h2>
+  </div>
+  <div class="card-body">
+    <app-item (outAddTarea)="addTarea($event)"></app-item>
+  </div>
+  <div class="card-footer text-left text-muted">
+    <app-lista [aItems]="aTareas" (outBorrarItem)="deleteTarea($event)"></app-lista>
+  </div>
+</div>
