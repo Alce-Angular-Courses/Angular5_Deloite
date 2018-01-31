@@ -7,6 +7,7 @@ import { PanelComponent } from './panel/panel.component';
 import { SystemModule } from '../system/system.module';
 import { BotonComponent } from './boton/boton.component';
 import { RouterModule, Routes } from '@angular/router/';
+import { RxComponent } from './rx/rx.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent}
@@ -23,7 +24,8 @@ const routes: Routes = [
     InicioComponent,
     DashboardComponent,
     PanelComponent,
-    BotonComponent
+    BotonComponent,
+    RxComponent
   ],
   exports: [
     InicioComponent
