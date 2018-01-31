@@ -15,11 +15,14 @@ import { AppComponent } from './app.component';
 /* import { InicioModule } from './inicio/inicio.module';
 import { TareasModule } from './tareas/tareas.module';
 import { AboutModule } from './about/about.module'; */
+import { CatalogoModule } from './catalogo/catalogo.module';
 // Configuracion LOCALE
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { HttpModule, Http } from '@angular/http';
+// Servicios de la aplicacion
+import { BookService } from './services/book.service';
 
 registerLocaleData(localeEs);
 
@@ -43,12 +46,13 @@ registerLocaleData(localeEs);
     ),
     AppRoutingModule,
     SharedModule,
-    SystemModule,
-    /* InicioModule,
-    TareasModule,
-    AboutModule */
+    SystemModule
+
   ],
-  providers: [ { provide: LOCALE_ID, useValue: 'es' } ],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' },
+    BookService
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
