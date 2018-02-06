@@ -6,7 +6,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate() {
     console.log('La guardia AuthGuard#canActivate ha sido invocada');
-    return false;
+    return true;
   }
 
 }

@@ -18,7 +18,6 @@ export class StoreService {
    getSubjectDatos() {
      return this.aDatos$;
    }
-
    updetaSubjectDatos() {
     this.aDatos$.next( this.aDatos );
    }
