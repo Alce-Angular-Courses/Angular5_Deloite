@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    Busqueda de libros
+  </div>
+  <div class="card-body">
+    <p class="card-text">Clave de búsqueda</p>
+    <input type="text" [(ngModel)] = "clave">
+    <button (click)="buscar()">Buscar</button>
+  </div>
+  <div *ngIf="aLibros.length" class="card-footer text-muted">
+   Resultado
+   <ul>
+     <li *ngFor="let libro of aLibros">{{libro}}</li>
+   </ul>
+  </div>
+</div>

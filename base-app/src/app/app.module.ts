@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 // Modulos de la aplicación
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -24,6 +25,8 @@ import { HttpModule, Http } from '@angular/http';
 // Servicios de la aplicacion
 import { BookService } from './services/book.service';
 import { AuthGuard } from './services/guard.service';
+import { GoogleBooksService } from './services/google-books.service';
+
 
 registerLocaleData(localeEs);
 
@@ -35,6 +38,7 @@ registerLocaleData(localeEs);
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     ChartsModule,
@@ -53,7 +57,8 @@ registerLocaleData(localeEs);
   providers: [
     { provide: LOCALE_ID, useValue: 'es' },
     BookService,
-    AuthGuard
+    AuthGuard,
+    GoogleBooksService
    ],
   bootstrap: [AppComponent]
 })
