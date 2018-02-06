@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'tareas', loadChildren: './tareas/tareas.module#TareasModule' },
   { path: 'catalogo', loadChildren: './catalogo/catalogo.module#CatalogoModule', canActivate: [AuthGuard]},
   { path: 'catalogo/*', loadChildren: './catalogo/catalogo.module#CatalogoModule'},
-  { path: 'about', loadChildren: './about/about.module#AboutModule' },
+  { path: 'imprimir', loadChildren: './print/print.module#PrintModule'},
+  { path: 'about', loadChildren: './about/about.module#AboutModule'},
   { path: '', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 

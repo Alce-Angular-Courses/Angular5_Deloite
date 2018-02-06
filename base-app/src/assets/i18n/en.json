@@ -1,6 +1,8 @@
 {
     "Inicio" : "Home",
     "Tareas" : "Todo",
+    "Catalogo" : "Catalog",
+    "Imprimir": "Print",
     "Acerca de": "About"
 }
 
