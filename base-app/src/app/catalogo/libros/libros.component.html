@@ -1,16 +1,18 @@
 <div class="card">
   <div class="card-header">
-    Busqueda de libros
+    <h4>Busqueda de libros</h4>
   </div>
-  <div class="card-body">
-    <p class="card-text">Clave de búsqueda</p>
-    <input type="text" [(ngModel)] = "clave">
-    <button (click)="buscar()">Buscar</button>
+  <div class="card-body pl-4 pr-4">
+    <div class="form-group">
+      <label for="clave">Clave de búsqueda</label>
+      <input type="text" id="clave" class="form-control" [(ngModel)] = "clave">
+    </div>
+    <button class="btn btn-primary" (click)="buscar()">Buscar</button>
   </div>
   <div *ngIf="aLibros.length" class="card-footer text-muted">
    Resultado
-   <ul>
-     <li *ngFor="let libro of aLibros">{{libro}}</li>
+   <ul class="list-group">
+     <li *ngFor="let libro of aLibros" class="list-group-item">{{libro}}</li>
    </ul>
   </div>
 </div>

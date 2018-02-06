@@ -11,12 +11,12 @@ export class GoogleBooksService {
 
   getLibros(clave) {
     return this.Http.get(this.url + clave).map(
-      (response: any) => this.extractTitles(response),
+      response => this.extractTitles(response),
       error => console.log(error)
       );
   }
 
-  private extractTitles(response: Response) {
+  private extractTitles(response) {
     if (response.items) {
       return response.items.map(
         book => book.volumeInfo.title);

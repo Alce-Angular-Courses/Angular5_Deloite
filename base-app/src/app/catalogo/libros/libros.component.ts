@@ -18,6 +18,7 @@ export class LibrosComponent implements OnInit {
 
   buscar() {
     // this.aLibros =
-    this.gbook.getLibros(this.clave);
+    this.gbook.getLibros(this.clave)
+      .subscribe( libros => this.aLibros = libros);
   }
 }
